@@ -9,11 +9,12 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         handler = GetComponent<CharacterHandler>();
-        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        input = new Vector2(Input.GetAxis("Horizontal") , Input.GetAxis("Vertical"));
         if (Input.GetButtonDown("Fire1"))
         {
             handler.AttackRequest();
