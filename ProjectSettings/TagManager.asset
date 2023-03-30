@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1207455415
+    locked: 0
+  - name: Powerups
+    uniqueID: 1845548263
+    locked: 0
+  - name: Bullet
+    uniqueID: 4030766377
+    locked: 0
+  - name: Player
+    uniqueID: 2278653151
+    locked: 0
+  - name: Enemy
+    uniqueID: 26742825
+    locked: 0
