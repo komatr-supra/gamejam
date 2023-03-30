@@ -14,9 +14,7 @@ public class SpriteAnimator1 : MonoBehaviour
     //actual animation, prevent switch to same animation
     private ANIMATION actualAnimation;
     private int currentFrame;
-    private float timer;
-
-    private const float FRAMERATE = .1f;
+    
 
     private void Awake()
     {
@@ -30,6 +28,9 @@ public class SpriteAnimator1 : MonoBehaviour
         selectedArray = idleSprites;
         SwitchFrame();
     }
+    private void Start() {
+        GameManager.Instance.SubscribeAnimationEvent(SwitchFrame);
+    }
 
     void Update()
     {
@@ -39,19 +40,12 @@ public class SpriteAnimator1 : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.G)) SetAnimation(ANIMATION.WALK);
         //end test
 
-        //timing can be same for all SpriteAnimators but its optimalization and not needed right now
-        timer += Time.deltaTime;
-
-        if (timer >= FRAMERATE)
-        {
-            timer -= FRAMERATE;
-            currentFrame = (currentFrame + 1) % selectedArray.Length;
-            SwitchFrame();
-        }
+        
     }
 
     private void SwitchFrame()
     {
+        currentFrame = (currentFrame + 1) % selectedArray.Length;
         spriteRenderer.sprite = selectedArray[currentFrame];
     }
 
