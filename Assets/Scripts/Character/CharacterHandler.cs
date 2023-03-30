@@ -32,7 +32,7 @@ public class CharacterHandler : MonoBehaviour
     {
         
     }
-
+    
     
     void Update()
     {

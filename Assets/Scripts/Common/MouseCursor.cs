@@ -18,6 +18,7 @@ public class MouseCursor : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        DontDestroyOnLoad(gameObject);
         Instance = this;
     }
     void Start()
