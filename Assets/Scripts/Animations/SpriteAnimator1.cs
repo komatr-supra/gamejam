@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpriteAnimator1 : MonoBehaviour
 {
-    [SerializeField]
     private SpriteRenderer spriteRenderer;
     [SerializeField]
     private Sprite[] idleSprites;
@@ -27,6 +26,7 @@ public class SpriteAnimator1 : MonoBehaviour
     private void Init()
     {
         //method is just as description, can be directly in awake
+        spriteRenderer = GetComponent<SpriteRenderer>();
         selectedArray = idleSprites;
         SwitchFrame();
     }
@@ -35,8 +35,8 @@ public class SpriteAnimator1 : MonoBehaviour
     {
         //test SetAnimation will be called from character handler
         //parameter can be struct with all data about character and animator can decide what must show... but this is working and we must move next
-        if(Input.GetKeyDown(KeyCode.F)) SetAnimation(ANIMATION.IDLE);
-        if(Input.GetKeyDown(KeyCode.G)) SetAnimation(ANIMATION.WALK);
+        //if(Input.GetKeyDown(KeyCode.F)) SetAnimation(ANIMATION.IDLE);
+        //if(Input.GetKeyDown(KeyCode.G)) SetAnimation(ANIMATION.WALK);
         //end test
 
         //timing can be same for all SpriteAnimators but its optimalization and not needed right now
