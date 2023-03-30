@@ -26,4 +26,8 @@ public class CanvasManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        
+    }
 }
