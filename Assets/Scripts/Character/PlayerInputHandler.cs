@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    public Transform player;
     private bool isCursorOnRightSide = false; // variable to store whether cursor is on right side
     private bool wasCursorOnRightSide = false; // variable to store previous state of cursor
 
@@ -26,17 +25,15 @@ public class PlayerInputHandler : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             handler.AttackRequest();
-        }
-        if (input != Vector2.zero || input == Vector2.zero)
-        {
-            handler.MoveRequestDirection(input);
-        }
+        }        
+        handler.MoveRequestDirection(input);
+        
 
         // get the x-coordinate of the cursor
         float cursorX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
 
-        // get the x-coordinate of the character
-        float playerX = player.position.x;
+        // get the x-coordinate of the character - this script is in character
+        float playerX = transform.position.x;
 
         // compare the two coordinates to determine if cursor is on right or left side
         if (cursorX > playerX)
@@ -52,7 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (isCursorOnRightSide != wasCursorOnRightSide)
         {
             // call the ChangeLookingSide function with the new side
-            ChangeLookingSide(isCursorOnRightSide);
+            handler.ChangeLookingSide(isCursorOnRightSide);
         }
 
         // update the previous state of the cursor

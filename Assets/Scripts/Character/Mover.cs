@@ -21,7 +21,7 @@ public class Mover : MonoBehaviour
         IsMoving = true;
     }
     private void FixedUpdate() {
-        rb2d.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * 0.1f));
+        rb2d.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime));
     }
 
     
