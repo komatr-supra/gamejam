@@ -50,6 +50,10 @@ public class GridScheme<T> {
         return height;
     }
 
+    public float getCellSize() {
+        return cellSize;
+    }
+
     public void getXY(Vector3 worldPosition, out int x, out int y) {
         x = Mathf.FloorToInt(worldPosition.x / cellSize);
         y = Mathf.FloorToInt(worldPosition.y / cellSize);

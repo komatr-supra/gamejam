@@ -19,6 +19,26 @@ public class Pathfinding {
     }
 
     /**
+        Finds the path between 2 nodes, given the world start position and world end position
+    */
+    public List<Vector3> findPath(Vector3 startWorldPosition, Vector3 endWorldPosition) {
+        grid.getXY(startWorldPosition, out int startX, out int startY);
+        grid.getXY(endWorldPosition, out int endX, out int endY);
+
+        List<PathNode> path = findPath(startX, startY, endX, endY);
+
+        if (path == null) {
+            return null;
+        } else {
+            List<Vector3> vectorPath = new List<Vector3>();
+            foreach (PathNode pathNode in path) {
+                vectorPath.Add(new Vector3(pathNode.x, pathNode.y) * grid.getCellSize() + Vector3.one * grid.getCellSize() * .5f);
+            }
+            return vectorPath;
+        }
+    }
+
+    /**
         Finds the path between 2 nodes, given the start position and the end position.
         Basically it implements the A* algorithm
     */
@@ -54,6 +74,10 @@ public class Pathfinding {
 
             foreach (PathNode neighbourNode in getNeighbourList(currentNode)) {
                 if (closedList.Contains(neighbourNode)) {
+                    continue;
+                }
+                if (!neighbourNode.isWalkable) {
+                    closedList.Add(neighbourNode);
                     continue;
                 }
 
@@ -148,7 +172,7 @@ public class Pathfinding {
     /**
         Returns the PathNode object, given the x and y coordinates of the grid
     */
-    private PathNode getNode(int x, int y) {
+    public PathNode getNode(int x, int y) {
         return grid.getValue(x, y);
     }
 

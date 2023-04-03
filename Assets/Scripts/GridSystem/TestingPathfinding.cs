@@ -19,13 +19,21 @@ public class TestingPathfinding : MonoBehaviour
             Vector3 mousePosition = getMouseWorldPosition();
             pathfinding.getGrid().getXY(mousePosition, out int x, out int y);
 
-            List<PathNode> path = pathfinding.findPath(0, 0, x, y);
+            // List<PathNode> path = pathfinding.findPath(0, 0, x, y);
+            List<Vector3> path = pathfinding.findPath(Vector3.zero, mousePosition);
 
             if (path != null) {
                 for(int i = 0;  i < path.Count - 1; i++) {
                     Debug.DrawLine(new Vector3(path[i].x, path[i].y) * 1f + Vector3.one * .5f, new Vector3(path[i+1].x, path[i+1].y) * 1f + Vector3.one * .5f, Color.green, 100f);
                 }
             }
+        }
+        // For tests purposes
+        if (Input.GetMouseButtonDown(1)) {
+            Vector3 mousePosition = getMouseWorldPosition();
+            pathfinding.getGrid().getXY(mousePosition, out int x, out int y);
+            PathNode pathNode = pathfinding.getNode(x, y);
+            pathNode.setIsWalkable(!pathNode.isWalkable);
         }
     }
 
