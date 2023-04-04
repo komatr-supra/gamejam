@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
         set { _sfxVolume = value; }
     }
     
-    private float _musicVolume = 1;
+    private float _musicVolume = 0.2f;
     public float MusicVolume
     {
         get { return _musicVolume; }

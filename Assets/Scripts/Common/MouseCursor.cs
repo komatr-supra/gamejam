@@ -13,6 +13,7 @@ public class MouseCursor : MonoBehaviour
     }
     private Camera cam;
     private void Awake() {
+        Cursor.visible = false;
         if(Instance != null) 
         {
             Destroy(gameObject);
@@ -30,6 +31,6 @@ public class MouseCursor : MonoBehaviour
     void Update()
     {
         cursorPosition = cam.ScreenToWorldPoint(Input.mousePosition);
-
+        transform.position = cursorPosition;
     }
 }

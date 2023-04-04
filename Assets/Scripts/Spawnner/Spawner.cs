@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
+    [SerializeField] private GameObject bulletExplosion;
     private string _prefabName;
     protected void LoadComponents(string PrefabName)
     {
@@ -75,6 +76,7 @@ public class Spawner : MonoBehaviour
     {
         this.poolObjs.Add(obj);
         obj.gameObject.SetActive(false);
+        Instantiate(bulletExplosion, obj.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
     }
 
     public virtual Transform getPrefabByName(string prefabName)

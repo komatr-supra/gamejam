@@ -5,10 +5,10 @@ using UnityEngine;
 public class BulletSpawner : Spawner
 {
     public static BulletSpawner Instance;
+    
 
-    
-    
-    
+
+
 
     public void Shoot(Vector3 firePoint, Quaternion quaternionRotation)
     {
