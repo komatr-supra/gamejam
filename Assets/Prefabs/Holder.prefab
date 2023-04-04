@@ -47,3 +47,4 @@ MonoBehaviour:
   prefabs:
   - {fileID: 6417499442630027390, guid: a0d10690df79a52439a30d88326f79ec, type: 3}
   poolObjs: []
+  bulletExplosion: {fileID: 8940436325034026590, guid: afbf311495d41654e8e6adc283cff23d, type: 3}
