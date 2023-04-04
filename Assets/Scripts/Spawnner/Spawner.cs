@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] protected Transform holder;
+    protected Transform holder;
     [SerializeField] protected List<Transform> prefabs;
     [SerializeField] protected List<Transform> poolObjs;
     private string _prefabName;
@@ -17,9 +17,9 @@ public class Spawner : MonoBehaviour
 
     protected virtual void LoadHolder()
     {
-        if (this.holder != null) return;
-        this.holder = transform.Find("Holder");
-        
+        //if (this.holder != null) return;
+        //this.holder = transform.Find("Holder");
+        holder = gameObject.transform;
     }
 
     protected virtual void LoadPrefabs()

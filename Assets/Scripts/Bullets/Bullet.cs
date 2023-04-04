@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         BulletSpriteObject = transform.Find("BulletSprite").gameObject;
         WeaponSpriteObject = transform.Find("WeaponSprite").gameObject;
-        firePoint = BulletSpawner.Instance._firePoint;
+        //firePoint = BulletSpawner.Instance._firePoint;
         _DamageDealer = transform.Find("DamageDealer").gameObject;
     }
 }

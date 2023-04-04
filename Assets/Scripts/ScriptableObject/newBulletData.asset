@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2528f3d7f8383459e78669b33bed9d, type: 3}
+  m_Name: newBulletData
+  m_EditorClassIdentifier: 
+  <_componentData>k__BackingField:
+  - rid: 5904153240477892608
+  - rid: 5904153240477892609
+  - rid: 5904153240477892610
+  - rid: 5904153240477892611
+  references:
+    version: 2
+    RefIds:
+    - rid: 5904153240477892608
+      type: {class: ForceData, ns: , asm: Assembly-CSharp}
+      data:
+        name: ForceData
+        <_magnitude>k__BackingField: 10
+        <direction>k__BackingField: {x: 0, y: 0}
+    - rid: 5904153240477892609
+      type: {class: BulletDespawnedData, ns: Bullets.Components.ComponentsData, asm: Assembly-CSharp}
+      data:
+        name: BulletDespawnedData
+        <distance>k__BackingField: 13
+        <_numberUnitCanGoThrough>k__BackingField: 13
+    - rid: 5904153240477892610
+      type: {class: BulletSpriteData, ns: Bullets.Components.ComponentsData, asm: Assembly-CSharp}
+      data:
+        name: BulletSpriteData
+        <_sprite>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - rid: 5904153240477892611
+      type: {class: DamageData, ns: Bullets.Components.ComponentsData, asm: Assembly-CSharp}
+      data:
+        name: DamageData
+        <damage>k__BackingField: 13

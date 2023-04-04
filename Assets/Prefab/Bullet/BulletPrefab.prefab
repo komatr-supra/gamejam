@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3649822870494835768}
-  - component: {fileID: 1390115302672297731}
+  - component: {fileID: 2784608041133074554}
   m_Layer: 0
   m_Name: DamageDealer
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Transform:
   m_Father: {fileID: 6417499442630027390}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390115302672297731
+--- !u!114 &2784608041133074554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3130598191963448257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0771dc1d815497d8fdf8802e42584ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 793daf75af8ac7a449452bbed6d03929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4848840439611477429
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_Size: {x: 1.26, y: 1.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4848840440203359592
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6417499442630027384}
   - component: {fileID: 6417499442630027385}
   - component: {fileID: 652288531204236962}
-  - component: {fileID: 6996626693172745177}
+  - component: {fileID: -3613071687572904959}
   m_Layer: 0
   m_Name: BulletPrefab
   m_TagString: Untagged
@@ -306,10 +306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4848840440203359592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191856084fba4b1c92145ca5ef1ebd0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 05fbfa036a5a1414e98f6d057d204d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6996626693172745177
+--- !u!114 &-3613071687572904959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,8 +318,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4848840440203359592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d135de1effa74dd2b477eac037648f25, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb3035c86132244faaccf61f616d663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 652288531204236962}
-  _bulletDataSo: {fileID: 11400000, guid: 21187ef2d7a787b46b4d7aee500661f2, type: 2}
+  _bulletDataSo: {fileID: 11400000, guid: 22634e01801324d4f947e1d2a1ae7a0b, type: 2}

@@ -24,7 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
         input = new Vector2(Input.GetAxis("Horizontal") , Input.GetAxis("Vertical"));
         if (Input.GetButtonDown("Fire1"))
         {
-            handler.AttackRequest();
+            handler.AttackRequest(MouseCursor.Instance.WorldMousePosition);
         }        
         handler.MoveRequestDirection(input);
         

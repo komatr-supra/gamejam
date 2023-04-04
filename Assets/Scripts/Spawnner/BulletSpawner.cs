@@ -6,32 +6,14 @@ public class BulletSpawner : Spawner
 {
     public static BulletSpawner Instance;
 
-    public Transform _firePoint
-    {
-        get => firePoint;
-        private set
-        {
-            firePoint = value;
-        }
-    }
     
-    [SerializeField] private Transform firePoint;
-    private void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-        }
-    }
+    
+    
 
-    private void LoadFirepoint()
+    public void Shoot(Vector3 firePoint, Quaternion quaternionRotation)
     {
-        this.firePoint = transform.Find("FirePoint");
-    }
-
-    void Shoot()
-    {
-        GameObject bullet = BulletSpawner.Instance.Spawn(firePoint.position, firePoint.rotation).gameObject;
+        GameObject bullet = BulletSpawner.Instance.Spawn(firePoint, quaternionRotation).gameObject;
+        
     }
     
     private void Awake() {
@@ -46,7 +28,7 @@ public class BulletSpawner : Spawner
     private void Start()
     {
         LoadComponents("BulletPrefab");
-        LoadFirepoint();
+        
     }
     
 }

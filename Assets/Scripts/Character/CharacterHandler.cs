@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class CharacterHandler : MonoBehaviour
 {
+    
+    [SerializeField] Transform bulletSpawnPoint;
     private Mover mover;
     public Action onMovementComplete;
     private SpriteAnimator1 animator;
+    private WeaponRotation weapon;
     private bool _isMoving;
     public bool IsMoving
     {
@@ -24,10 +27,12 @@ public class CharacterHandler : MonoBehaviour
     private void Awake() {
         mover = GetComponent<Mover>();
         animator = GetComponent<SpriteAnimator1>();
+        weapon = GetComponentInChildren<WeaponRotation>();
     }
     public void ChangeLookingSide(bool isLookingRight)
     {
-        transform.localScale = new Vector3(isLookingRight ? 1 : -1, 1, 1);
+        GetComponent<SpriteRenderer>().flipX = !isLookingRight;
+        weapon.GetComponent<SpriteRenderer>().flipY = !isLookingRight;
     }
     
     
@@ -47,9 +52,10 @@ public class CharacterHandler : MonoBehaviour
         IsMoving = true;
     }
     
-    public void AttackRequest()
+    public void AttackRequest(Vector3 mousePosition)
     {
-        Debug.Log("here will be called shoot script");
+        //Debug.Log("here will be called shoot script");
         //callback if bullet was shoot?
+        weapon.Shoot();
     }
 }

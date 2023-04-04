@@ -18,6 +18,7 @@ namespace Bullets.Components
         private void OnCollisionEnter2D(Collision2D col)
         {
             _damageDealer.DealDame(col.transform);
+            BulletSpawner.Instance.Despawn(this.transform);
         }
     }
 }
