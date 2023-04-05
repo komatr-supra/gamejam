@@ -10,11 +10,6 @@ public class ActivateColliderOnEnemyDeath : MonoBehaviour
     public GameObject[] enemies; // Array of enemy objects in the scene
     public GameObject doorClosed; // Array of enemy objects in the scene
 
-    private void Start()
-    {
-        // Initialize the array of enemy objects
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    }
     public void LoadScene()
     {
         // Get the current scene index
@@ -25,20 +20,11 @@ public class ActivateColliderOnEnemyDeath : MonoBehaviour
     }
     private void Update()
     {
-        bool allEnemiesDead = true;
-
-        // Check if all enemies are dead
-        foreach (GameObject enemy in enemies)
-        {
-            if (enemy.activeSelf)
-            {
-                allEnemiesDead = false;
-                break;
-            }
-        }
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log($"enemies numb: {enemies.Length}");
 
         // Activate the collider object if all enemies are dead
-        if (allEnemiesDead)
+        if (enemies.Length == 0)
         {
             colliderObject.SetActive(true);
             doorClosed.SetActive(false);
