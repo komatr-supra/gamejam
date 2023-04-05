@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterHandler : MonoBehaviour
 {
@@ -57,5 +58,12 @@ public class CharacterHandler : MonoBehaviour
         //Debug.Log("here will be called shoot script");
         //callback if bullet was shoot?
         weapon.Shoot();
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Enemy")) {
+            Destroy(gameObject);
+            SceneManager.LoadScene("EndScene");
+        }
     }
 }
