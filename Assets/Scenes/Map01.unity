@@ -726,6 +726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 21
   height: 8
+  mapNumber: 0
 --- !u!4 &698317004
 Transform:
   m_ObjectHideFlags: 0
@@ -999,10 +1000,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.0012248898
     y: 0
-    width: 0.99951005
-    height: 0.9967845
+    width: 1.6609505
+    height: 1.1897105
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1488,7 +1489,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &1140396108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 136222546674207667, guid: 4d360a6c3c021ad4a994e9d51964d3e7, type: 3}
@@ -1550,7 +1551,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1286548903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,7 +2416,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1771885199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,7 +2712,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1001 &1904168359
 PrefabInstance:
   m_ObjectHideFlags: 0

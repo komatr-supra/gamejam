@@ -27,7 +27,7 @@ public class GridScheme<T> {
         }
 
         // only for tests purposes. Change the isDebug to true, in order to see the grid
-        bool isDebug = true;
+        bool isDebug = false;
         if (isDebug) {
             for (int x = 0; x < gridArray.GetLength(0); x++) {
                 for (int y = 0; y < gridArray.GetLength(1); y++) {
